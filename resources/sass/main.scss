@@ -1,0 +1,175 @@
+body {
+	background-image:url('../../public/img/Background.png')no-repeat center center fixed;
+	background-size: cover;
+	/* Group 6 */
+}
+h1{
+	color: rgba(59, 50, 68, 1);
+	font-family: century gothic;
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+
+}
+h2{
+	color: rgba(59, 50, 68, 1);
+	font-family: century gothic;
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: left;
+
+}
+h3{
+	color: white;
+	font-family: century gothic;
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size:60px;
+
+}
+.signup{
+	width:520px;
+	height: 620px;
+	background: white;
+	color: #fff;
+	top:50%;
+	left:50%;
+	
+	transform: translate(20%,20%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	border-radius: 20px;
+}
+.avatar {
+	width: 246.68px;
+	height: 109.08px;
+	border-radius: 38%;
+	position: absolute;
+	 top: -50px;
+	left:calc(50% - 100px);
+	background: transparent;
+	
+}
+.signup h2{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.signup input{
+	width:100%;
+	margin-bottom:20px;
+}
+
+.signup input[type="text"], input[type="password"]
+{
+	border:none;
+	border-bottom: 2px solid gray;
+	background:transparent;
+	outline: none;
+	height: 40px;
+	color: rgba(59, 50, 68, 1);
+	font-size:15px;
+}
+
+.login{
+	width:420px;
+	height: 820px;
+	background:transparent;
+	color: #fff;
+	top:50%;
+	left:50%;
+	transform: translate(20%,-55%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+	border-radius: 20px;
+	position: fixed;
+	
+}
+.login h3{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.login input{
+	width:100%;
+	margin-bottom:20px;
+}
+
+.login input[type="logtext"]
+{
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	background:white;
+	outline: none;
+	height: 40px;
+	color: rgba(59, 50, 68, 1);
+	font-size:20px;
+
+}
+.login  input[type="password"]
+{
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	background:white;
+	outline: none;
+	height: 40px;
+	color: rgba(59, 50, 68, 1);
+	font-size:20px;
+}
+.login a{
+	text-decoration: none;
+	font-size: 25px;
+	line-height: 20px;
+	color:white;
+
+}
+input, select, textarea{
+    color: #ff0000;
+}
+
+textarea:focus, input:focus {
+    color: #ff0000;
+}
+
+a.button {
+	
+		width:90%;
+    
+    
+	position: fixed;
+	height:30px;
+	background: rgba(220, 12, 74, 1);
+	color: white;
+	font-size:30px;
+	font-family: arial;
+	text-align:center;
+	padding: 7px 1px;
+    border-radius: 20px;
+
+}
+a.button:hover
+{
+	background-color:rgba(255, 168, 0, 0.9803);
+}
+a.sbutton {
+	width:90%;
+    
+    
+	position: fixed;
+	height:40px;
+	background: rgba(220, 12, 74, 1);
+	color: white;
+	font-size:30px;
+	font-family: arial;
+	text-align:center;
+	
+    border-radius: 20px;
+
+}
+a.sbutton:hover
+{
+	background-color:rgba(255, 168, 0, 0.9803);
+}
