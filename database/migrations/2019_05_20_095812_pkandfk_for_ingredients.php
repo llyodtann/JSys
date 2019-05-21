@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIncomestatementsTable extends Migration
+class PkandfkForIngredients extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateIncomestatementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('incomestatements', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('ingredients', function (Blueprint $table) {
+            $table->foreign('si_num')->references('stall_num')->on('stalls');
         });
     }
 
@@ -26,6 +25,8 @@ class CreateIncomestatementsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('incomestatements');
+        Schema::table('ingredients', function (Blueprint $table) {
+            //
+        });
     }
 }

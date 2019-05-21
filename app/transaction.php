@@ -4,7 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class transaction extends Model
+class Transaction extends Model
 {
-    //
+    // protected $primaryKey = ['si_num', 'ingredient_name']; // or null
+    protected $primaryKey = 'transaction_number';
+    public $incrementing = false;
 }

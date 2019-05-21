@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     public function index(){
         $title = 'Welcome to the JSys';
-        return view('pages.index')->with('title', $title);
+        return view('welcome')->with('title', $title);
     }
     public function about(){
         $title = 'About Us';

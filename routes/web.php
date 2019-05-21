@@ -25,3 +25,6 @@ Route::get('/services', 'PagesController@services');
 Route::get('/dash', 'PagesController@dash');
 
 Route::get('/tos', 'PagesController@tos');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

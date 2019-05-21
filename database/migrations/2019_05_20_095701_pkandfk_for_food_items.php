@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIngredientsTable extends Migration
+class PkandfkForFoodItems extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateIngredientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ingredients', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('food_items', function (Blueprint $table) {
+
+            $table->foreign('s_num')->references('stall_num')->on('stalls');
         });
     }
 
@@ -26,6 +26,8 @@ class CreateIngredientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ingredients');
+        Schema::table('food_items', function (Blueprint $table) {
+            //
+        });
     }
 }

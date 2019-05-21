@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTransactionfooditemsTable extends Migration
+class UsernameToUser extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateTransactionfooditemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transactionfooditems', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('username');
         });
     }
 
@@ -26,6 +25,8 @@ class CreateTransactionfooditemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transactionfooditems');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }

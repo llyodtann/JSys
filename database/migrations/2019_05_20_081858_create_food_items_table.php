@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStallsTable extends Migration
+class CreateFoodItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateStallsTable extends Migration
      */
     public function up()
     {
-        Schema::create('stalls', function (Blueprint $table) {
-            $table->integer('stall_num');
-            $table->string('s_name', 30);
-            $table->int('location');
-            $table->binary('logo');
-            $table->primary('stall_name');
+        Schema::create('food_items', function (Blueprint $table) {
+            $table->string('dish_name');
+            $table->decimal('price', 5, 2);
+            $table->decimal('tot_cost', 5, 2);
+            $table->integer("s_num");
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateStallsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stalls');
+        Schema::dropIfExists('food_items');
     }
 }
